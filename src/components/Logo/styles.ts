@@ -9,6 +9,7 @@ export const LinkHome = styled.a`
   display: flex;
   justify-content: center;
   text-decoration: none;
+  align-items: center;
 `
 
 export const Title = styled.h1`
@@ -16,10 +17,10 @@ export const Title = styled.h1`
   font-size: 1.4rem;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  padding-left: 1rem;
 `
 
 export const ImgLogo = styled.img`
   width: 2rem;
   height: 2rem;
-  padding-left: 1rem;
 `

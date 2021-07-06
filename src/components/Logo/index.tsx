@@ -3,9 +3,9 @@ import * as S from './styles'
 
 export const Logo = () => (
   <S.Wrapper>
-    <S.LinkHome>
-      <S.Title>Movies4Fun</S.Title>
+    <S.LinkHome href="/">
       <S.ImgLogo src={LogoImg} alt="Icon play" />
+      <S.Title>Movies4Fun</S.Title>
     </S.LinkHome>
   </S.Wrapper>
 )
