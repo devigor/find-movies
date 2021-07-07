@@ -13,7 +13,12 @@ export const InputSearch = () => {
 
   return (
     <S.Wrapper>
-      <S.Input ref={InputRef} placeholder="Search here or press K to start" />
+      <S.Input
+        ref={InputRef}
+        placeholder="Search here or press K to start"
+        data-testid="input-search"
+        type="text"
+      />
     </S.Wrapper>
   )
 }
