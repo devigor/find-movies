@@ -5,5 +5,5 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #444444;
+  background-color: #000;
 `
