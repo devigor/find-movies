@@ -3,7 +3,6 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.header`
   width: 100%;
-  margin-top: 1rem;
 `
 
 export const LinkHome = styled.a`
@@ -14,7 +13,6 @@ export const LinkHome = styled.a`
 
   ${media.greaterThan('medium')`
     justify-content: right;
-    margin-left: 2rem;
   `}
 `
 

@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 62.5%; // 1rem = 10px
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #000;
   }
 
 `

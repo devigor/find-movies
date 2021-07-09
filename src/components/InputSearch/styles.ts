@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
-  padding: 2rem 1rem 1rem 2rem;
+  padding: 1rem 2rem 0rem 0rem;
 `
 
 export const Input = styled.input`
