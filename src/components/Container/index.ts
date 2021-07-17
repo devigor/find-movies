@@ -7,3 +7,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 `
+export const CardContainer = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+
+  > a {
+    text-decoration: none;
+    color: #000;
+  }
+`

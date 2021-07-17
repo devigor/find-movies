@@ -2,15 +2,15 @@ import { FormEvent, useEffect, useState } from 'react'
 
 import { Logo } from 'components/Logo'
 import { InputSearch } from 'components/InputSearch'
+import { CardContainer } from 'components/Container'
+import MovieCard from 'components/MovieCard'
+import { Link } from 'react-router-dom'
 
 type MovieInfoProps = {
-  id: number
-  originalTitle: string
-  overview: string
-  posterPath: string
-  releaseDate: string
-  title: string
-  voteAverage: number
+  imdbID: number
+  Title: string
+  Year: string
+  Poster: string
 }
 
 export function Home() {
@@ -26,14 +26,14 @@ export function Home() {
     async function makeRequest() {
       const URL = process.env.REACT_APP_URL
       const KEY = process.env.REACT_APP_API_KEY
-      const LAN = process.env.REACT_APP_LANGUAGE
 
       const request = await fetch(
-        `${URL}?api_key=${KEY}&language=${LAN}&query=${movieName}&include_adult=false`
+        `${URL}?apikey=${KEY}&s=${movieName}&page=1&type=movie`
       )
 
-      const { results } = await request.json()
-      setMovieResult(results)
+      const { Search } = await request.json()
+      console.log(Search)
+      setMovieResult(Search)
     }
 
     if (movieName.trim() === '') {
@@ -46,13 +46,17 @@ export function Home() {
     <>
       <Logo />
       <InputSearch value={movieName} handleChange={handleChange} />
-      <ul>
+      <CardContainer>
         {movieResult?.map((movie) => (
-          <li key={movie.id} style={{ color: 'white' }}>
-            {movie.title}
-          </li>
+          <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID}>
+            <MovieCard
+              posterPath={movie.Poster}
+              releaseDate={movie.Year}
+              title={movie.Title}
+            />
+          </Link>
         ))}
-      </ul>
+      </CardContainer>
     </>
   )
 }
